@@ -1,0 +1,798 @@
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.visuallyHidden:not(:focus):not(:active) { position: absolute; width: 1px; height: 1px; margin: -1px;border: 0;padding: 0;white-space: nowrap;clip-path: inset(100%);clip: rect(00 0 0);overflow: hidden;}
+
+
+/*====== global settings ======*/
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Cabin', sans-serif; 
+    font-size: 1.6rem;
+    text-align: center;
+    line-height: 2.9rem;
+}
+
+.wrapper {
+    max-width: 1280px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* stripping styles */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+ul,
+a,
+button {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style: none;
+}
+
+li {
+    list-style: none;
+    text-decoration: none;
+} 
+
+/*====== styles begin here ======*/
+/* Fonts: 
+    font-family: 'Great Vibes', cursive;
+    font-family: 'Cabin', sans-serif; 
+*/
+
+/* Color Scheme
+Accent colour
+#FDC800
+rgb(253, 200, 0)
+
+Black shade
+#232323
+rgb(35, 35, 35)
+
+Background colour
+#EAEDF4
+rgb(234, 237, 244)
+
+White shade
+#F8F8F8
+rgb(248, 248, 248)
+*/
+
+/*=== Typography styles ===*/
+h2, 
+h4 {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 2rem;
+}
+
+/*  a link styles */
+a,
+a:hover,
+a:focus,
+a:active,
+a:visited {
+    text-decoration: none;
+    color: #232323;
+    text-transform: uppercase;
+}
+
+a:active {
+    color: #FDC800;
+}
+
+/* Navigation accessibility */
+.skip-link {
+    position: absolute;
+    left: -1000px;
+    top: 5px;
+    z-index: 999;
+    background: white;
+    color: black;
+}
+
+.skip-link:focus {
+    left: 0;
+}
+
+/* button styles */
+button {
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+button a {
+    background: #FDC800;
+    color: #000;
+    padding: 10px 30px;
+    font-weight: bold;
+}
+
+button a:hover {
+    background: #232323;
+    color: #FDC800;
+}
+
+/* header styles */
+header {
+    background-image: url(../tasty-assets/asset-1.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+/* nav styles */
+nav .wrapper {
+    width: 80%;
+}
+
+.logo-top {
+    float: left;
+}
+
+.fas.fa-bars {
+    display: none;
+} /* For Tablet and Mobile only */
+
+nav ul {
+    float: right;
+}
+
+nav li {
+    display: inline-block;
+    padding-top: 2.5rem;
+    margin-left: 2rem;
+}
+
+nav li a {
+    font-family: 'Cabin', sans-serif;
+    font-weight: bold;
+    text-align: right;
+}
+
+.logo-top h2,
+.about h2,
+.meet-the-cook h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4.2rem;
+    text-transform: none;
+    font-weight: lighter;
+}
+
+.logo-top h2 {
+    padding-top: 2rem;
+}
+
+/* Logo styles */
+.header-center {
+    clear: both;
+    position: relative;
+}
+
+.main-logo {
+    position: absolute;
+    top: 150px;
+    left: 37%;
+}
+
+h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 12rem;
+    margin-top: 5.5rem;
+    position: absolute;
+    font-weight: lighter;
+}
+
+.header-center h2 {
+    font-size: 2.7rem;
+    margin-left: 7rem;
+}
+
+/* social media styles - Desktop only */
+.social-media {
+    position: absolute;
+    top: 175px;
+    right: 10px;
+}
+
+.social-media li a i {
+    color: #FDC800;
+}
+
+/* Section About styles */
+.about {
+    background:#EAEDF4;
+}
+
+.about,
+.meet-the-cook {
+    padding: 70px 0;
+}
+
+.about .wrapper {
+    width: 55%;
+}
+
+.about h2 {
+    margin-top: 40px;
+}
+
+.about p,
+.meet-the-cook p {
+    margin: 4rem auto 2.5rem;
+}
+
+/* Section Links styles */
+.links {
+    background: #232323;
+    padding: 5rem 0;
+}
+
+.links a {
+    color: #f8f8f8;
+    font-size: 2rem;
+}
+
+.links .wrapper {
+    width: 55%;
+}
+
+.box {
+    float: left;
+    margin: 20px;
+    width: calc((100% - 120px) / 3);
+}
+
+/* Gallery styles */
+.gallery {
+    padding: 40px;
+}
+
+.gallery .img-container {
+    float: left;
+    margin: 30px 10px;
+    width: calc((100% - 60px) /3);
+}
+
+/* Blog styles */
+.blog {
+    background:#EAEDF4;
+}
+
+.text-one {
+    float: left;
+    width: 50%;
+    padding-top: 2%;
+}
+
+.text-two {
+    float: right;
+    width: 50%;
+    padding-top: 2%;
+}
+
+.row-one img {
+    float: left;
+    width: 50%;
+}
+
+.row-two img {
+    float: left;
+    width: 50%;
+}
+
+.text-one h2,
+.text-one p,
+.text-one button {
+    margin-left: 20%;
+    margin-top: 3%;
+}
+
+.text-two h2,
+.text-two p,
+.text-two button {
+    margin-right: 20%;
+    margin-top: 3%;
+}
+
+.text-one p,
+.text-two p {
+    padding: 0 17%;
+}
+
+/* Section Meet the Cook */
+.meet-the-cook .wrapper {
+    width: 85%;
+}
+
+.meet-the-cook .img-container {
+    float: left;
+    margin-top: 100px;
+    margin-left: 60px;
+    width: calc(35% - 60px);
+    position: relative;
+}
+
+.meet-the-cook .container-text {
+    float: left;
+    padding-right: 15px;
+    margin-left: 35px;
+    width: calc(65% - 35px);
+    text-align: left;
+}
+
+.meet-the-cook h2 {
+    margin-top: 20px;
+}
+
+.meet-the-cook img {
+    position: absolute;
+    top: -100px;
+}
+
+/* footer styles */
+footer {
+    background: #232323;
+    color: #f8f8f8;
+    clear: both;
+    margin-top: 1rem;
+}
+
+footer .wrapper {
+    width: 85%;
+}
+
+.top-footer {
+    padding: 10rem 0;
+    text-align: left;
+}
+
+.form {
+    float: right;
+    width: 50%;
+}
+
+.contact {
+    float: left;
+    width: 15%;
+}
+
+.pages {
+    float: left;
+    width: 15%;
+}
+.recent-posts  {
+    float: left;
+    width: 20%;
+}
+
+/* Form styles */
+form {
+    margin-top: 10px;
+}
+
+input[type=email] {
+    float: left;
+    width: 70%;
+    height: 40px;
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding: 0 0 0 3rem;
+}
+
+form button {
+    float: left;
+    width: 30%;
+    color: #232323;
+    background: #FDC800;
+    height: 40px;
+    font-weight: bold;
+}
+/*  End of form styles */
+
+.contact {
+    padding-right: 1px;
+}
+
+footer .hidden-for-desktop {
+        display: none;
+    }
+
+footer li a,
+footer li a:hover,
+footer li a:visited { 
+    color: white;
+}
+
+footer li a:active {
+    color: #FDC800;
+}
+
+.contact li a,
+.recent-posts li a {
+    text-transform: none;
+}
+
+.bottom-footer {
+    background-color: #000;
+    color: #777;
+    font-weight: lighter;
+    padding: 10px 0;
+}
+
+/* ======= Media Queries ======= */
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+    .social-media li a i {
+    color: #232323;
+    }
+
+    .links .wrapper {
+        width: 85%;
+    }
+
+    .gallery {
+        padding: 0;
+    }
+
+    .text-one p,
+    .text-two p {
+        padding: 0 2%;
+    }
+
+    .text-one h2,
+    .text-one p,
+    .text-one button {
+        margin-left: 5%;
+    }
+
+    .text-two h2,
+    .text-two p,
+    .text-two button {
+        margin-right: 5%;
+    }
+
+    .contact {
+        float: left;
+        width: 30%;
+        padding-right: 25px;
+        margin-bottom: 10px;
+    }
+
+    .pages {
+        float: left;
+        width: 20%;
+    }
+
+    .recent-posts  {
+        clear: both;
+        float: none;
+        width: 50%;
+    }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+/* nav bar tablet */
+    nav .wrapper {
+        width: 90%;
+    }
+    
+    nav li {
+        display: none;
+    }
+    
+    .fas.fa-bars {
+        font-size: 4rem;
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+    
+/* header tablet */
+    .main-logo {
+        left: 28%;
+    }
+    
+    .social-media {
+        display: none;
+    }
+
+    .about {
+        padding: 30px 0 50px;
+    }
+
+/* gallery tablet */
+    .gallery {
+        padding: 0;
+    }
+    
+    .gallery .wrapper {
+        width: 100%;
+    }
+
+    .gallery .img-container {
+        margin: 0;
+        width: calc(100% / 3);
+    }
+
+/* blog tablet */
+    .text-one,
+    .text-two,
+    .row-one img,
+    .row-two img {
+        float: none;
+        width: 100%;
+    }
+
+    .text-one, 
+    .text-two {
+        margin-bottom: 4rem;
+    }
+
+    .text-one p, 
+    .text-two p {
+        padding: 0 7%;
+    }
+
+/* meet-the-cook tablet */
+    .meet-the-cook {
+        padding: 0 0 2rem 0;
+    }
+
+    .meet-the-cook .img-container {
+        float: none;
+        width: 45%;
+        margin-top: 7rem;
+        margin-left: 30%;
+    }
+
+    .meet-the-cook img {
+        position: relative;
+        top: 0;
+    }
+
+    .meet-the-cook .container-text {
+        float: none;
+        width: 100%;
+        clear: both;
+        position: relative;
+        padding: 5px;
+        margin: 5px;
+        text-align: center;
+    }
+
+    .meet-the-cook h2 {
+        margin-top: 5rem;
+    }
+
+    /* Footer Tablet */
+    .top-footer {
+        text-align: center;
+    }
+
+    .top-footer .container {
+        margin-bottom: 3rem;
+    }
+
+    .form {
+        clear: both;
+        float: none;
+        width: 100%;
+    }
+
+    .contact,
+    .pages {
+        clear: both;
+        float: none;
+        width: 100%;
+    }
+
+    .contact {
+        padding-right: 0;
+    }
+
+    .contact p a {
+        text-transform: none;
+        color: #f8f8f8;
+    }
+    .pages ul {
+        margin-left: 4rem;
+    }
+
+    .pages li {
+        display: inline-block;
+        padding-right: 3%;
+    }
+
+    .menu-bottom li::after {
+        content: "|";
+        float: right;
+        padding-left: 15px;
+    }
+    
+	.menu-bottom li:last-child::after {
+        display: none;
+    }
+
+    .recent-posts {
+        display: none;
+    }
+
+    footer .hidden-for-mobile {
+        display: none;
+    }
+
+    footer .hidden-for-desktop {
+        display: inline-block;
+    }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+    .main-logo {
+        left: 20%;
+    }
+
+    button a {
+        padding: 15px 45px;
+    }
+
+    .about .wrapper {
+        width: 80%;
+    }
+
+    .about h2 {
+        margin-top: 20px;
+    }
+    
+    .links {
+        padding: 2.5rem 0;
+    }
+
+    .links .wrapper {
+        width: 80%;
+    }
+
+    .links .box i {
+        font-size: 3.5rem;
+    }
+
+    .box {
+        float: none;
+        margin: 2.5rem auto;
+        font-size: 3.2rem;
+        font-weight: bold;
+        width: 100%;
+    }
+    
+    .gallery {
+        padding: 0;
+    }
+
+    .gallery .wrapper {
+        width: 100%;
+    }
+
+    .gallery .img-container {
+        float: left;
+        margin: 0;
+        width: 50%;
+    }
+
+    .img-container.hidden-for-mobile {
+        display:none;
+    }
+
+    .text-one,
+    .text-two {
+        padding: 10%;
+    }
+    
+    .text-one h2,
+    .text-two h2 {
+        margin-top: 0;
+    }
+
+    .text-one p,
+    .text-two p {
+        margin: 8% 0;
+    }
+
+    .meet-the-cook .img-container {
+        width: 60%;
+        margin-top: 5rem;
+        margin-left: 20%;
+    }
+
+    .meet-the-cook p {
+        text-align: left;
+        margin-top: 2rem;
+    }
+
+/* Footer Mobile */
+    footer .wrapper {
+        width: 90%;
+    }
+
+    .top-footer {
+        padding: 5rem 0;
+    }
+    
+    .form {
+        float: none;
+    }
+    
+    .contact,
+    .pages,
+    .recent-posts {
+        float: none;
+    }
+
+    input[type=email] {
+        float: none;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    form button {
+        float: none;
+        width: 100%;
+    }
+}
+
+/* Extra Queries */
+@media (max-width: 450px) {
+    .main-logo h1 {
+        font-size: 10rem;
+        margin-top: 4rem;
+    }
+
+    .header-center h2 {
+    font-size: 2rem;
+    }
+
+    .pages ul {
+        margin-left: 0;
+    }
+    .pages li {
+        padding-right: 2px;
+    }
+}
+
+@media (max-width: 372px) {
+    .main-logo h1 {
+        font-size: 8rem;
+    }
+
+    .header-center h2 {
+        margin-left: 5rem;
+    }
+}
